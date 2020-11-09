@@ -4,11 +4,9 @@ import static org.junit.Assert.fail;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import org.junit.Test;
-
 
 /**
  * This is the JUnit test for {@link it.unibo.oop.lab.nesting2.Acceptable}
@@ -47,7 +45,7 @@ public class AcceptableTest {
          * Failing acceptance
          */
         final List<Integer> list = Arrays.asList(10, 20, 30, 40);
-        final Acceptable<Integer> acc = new OneListAcceptable<>(Collections.emptyList());
+        final Acceptable<Integer> acc = new OneListAcceptable<>(list);
         final Acceptor<Integer> acceptor = acc.acceptor();
         try {
             for (final Integer el: list) {

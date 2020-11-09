@@ -7,11 +7,18 @@ public class OneListAcceptable<T> implements Acceptable<T> {
 
 	private List<T> acceptedList;
 	
+	/**
+	 * @param acceptedList of accepted Element T
+	 */
+	public OneListAcceptable(List<T> acceptedList) {
+		this.acceptedList = acceptedList;
+	}
+	
 	public Acceptor<T> acceptor() {
 		return new Acceptor<T>() {
 			
-			Iterator<T> actualAcceptedIterator = acceptedList.iterator();
-
+			private Iterator<T> actualAcceptedIterator = acceptedList.iterator();
+			
 			public void accept(T newElement) throws ElementNotAcceptedException {
 				if (!actualAcceptedIterator.hasNext() 
 						|| !actualAcceptedIterator.next().equals(newElement)) {
@@ -28,15 +35,11 @@ public class OneListAcceptable<T> implements Acceptable<T> {
 		};
 	}
 
-	public OneListAcceptable(List<T> acceptedList) {
-		this.acceptedList = acceptedList;
-	}
-
-
+	/**
+	 * @return String rapresentation of acceptedList
+	 */
 	public String toString() {
 		return "OneListAcceptable [acceptedList=" + acceptedList + "]";
 	}
-	
-	
 	
 }
