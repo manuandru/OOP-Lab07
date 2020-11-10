@@ -54,11 +54,11 @@ public class SportSocialNetworkUserImpl<U extends User> extends SocialNetworkUse
      */
     static {
         SOCCER = new Sport("Soccer");
-        F1 =  new Sport("F1");;
-        MOTOGP =  new Sport("MotoGp");;
-        VOLLEY =  new Sport("Volley");;
-        BASKET =  new Sport("Basket");;
-        BIKE =  new Sport("Bike");;
+        F1 =  new Sport("F1");
+        MOTOGP =  new Sport("MotoGp");
+        VOLLEY =  new Sport("Volley");
+        BASKET =  new Sport("Basket");
+        BIKE =  new Sport("Bike");
     }
 
     /**
